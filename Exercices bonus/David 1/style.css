@@ -1,0 +1,112 @@
+  .clear {
+    clear: both;
+  }
+
+
+  .slide-toggle {
+    display: none;
+  }
+
+  .slidemenu {
+    font-family: arial, sans-serif;
+    background-color: cornflowerblue;
+    text-decoration: none;
+    text-align: center;
+    line-height: 3em;
+    width: 400px;
+  }
+
+  label {
+    width: 100px;
+  }
+
+  .slidemenu label {
+    text-align: center;
+    float: left;
+
+  }
+
+  .slidemenu label:hover {
+    color: #fff;
+    background-color:blue;
+  }
+  
+
+  /*Bar Style*/
+
+  .slider {
+    width: 100%;
+    height: 5px;
+    display: block;
+    background: #ccc;
+    margin-top: 0px;
+    border-radius: 5px;
+  }
+
+  .slider .bar {
+    width: 25%;
+    height: 5px;
+    background: #333;
+    border-radius: 5px;
+  }
+
+
+  /*Animations*/
+  .slidemenu label,  .slider .bar {
+    transition: all 500ms ease-in-out;
+  }
+
+  .slidemenu #slide-item-1:checked~.slider .bar {
+    margin-left: 0;
+  }
+
+  .slidemenu #slide-item-2:checked~.slider .bar {
+    margin-left: 25%;
+  }
+
+  .slidemenu #slide-item-3:checked~.slider .bar {
+    margin-left: 50%;
+  }
+
+  .slidemenu #slide-item-4:checked~.slider .bar {
+    margin-left: 75%;
+  }
+
+  
+
+  .slidemenu #btn1:hover~.slider .bar {
+    margin-left: 0;
+  }
+
+  .slidemenu #btn2:hover~.slider .bar {
+    margin-left: 25%;
+  }
+
+  .slidemenu #btn3:hover~.slider .bar {
+    margin-left: 50%;
+  }
+
+  .slidemenu #btn4:hover~.slider .bar {
+    margin-left: 75%;
+  }
+ 
+
+  .slidemenu #slide-item-1:checked~ #btn1 {
+    background-color: darkblue;
+    color: whitesmoke;
+  }
+
+  .slidemenu #slide-item-2:checked~ #btn2 {
+    background-color: darkblue;
+    color: whitesmoke;
+  }
+
+  .slidemenu #slide-item-3:checked~ #btn3 {
+    background-color: darkblue;
+    color: whitesmoke;
+  }
+
+  .slidemenu #slide-item-4:checked~ #btn4 {
+    background-color: darkblue;
+    color: whitesmoke;
+  }

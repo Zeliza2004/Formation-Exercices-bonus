@@ -1,0 +1,95 @@
+/*************************************************/
+/*
+Consignes de base :
+Le HTML et le CSS sont totalement modifiable sauf pour ce qui existe déjà.
+- Utilisation de grid interdite, vous devez utiliser Flex
+- Vous ne pouvez pas utiliser la propriété 'z-index'
+- Vous ne pouvez pas utiliser la propriété 'position'
+- Vous pouvez m'insulter ^^
+
+Consigne bonus :
+- Réaliser le tout en moins de 60 lignes de CSS (hors commentaires et 'lignes d'aération')
+
+PS : pour ceux qui le demanderais oui c'est une reproduction au pixel près qui est attendue, mon Discord reste ouvert pour une astuce si elle est gentillement demandée
+
+ */
+/************************************************/
+.container-fluid>div#main_box {
+    height: 875px;
+    width: 875px;
+}
+
+.jaune {
+    background-color: yellow;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-flow: column;
+}
+
+.haut {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.bas {
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    display: flex;
+}
+
+.oeilgauche,
+.oeildroit {
+    background-color: black;
+    width: 33%;
+    height: 100%;
+}
+
+.nez {
+    background-color: black;
+    width: 17%;
+    height: 60%;
+    border-radius: 50%;
+    transform: rotate(90deg) translate(81%);
+}
+
+.rougeetbleu {
+    display: flex;
+    width: 100%;
+    height: 85%;
+}
+
+.bleu,
+.rouge {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.bleu {
+    background-color: blue;
+    justify-content: flex-end;
+}
+
+.rouge {
+    background-color: red;
+}
+
+.bouche {
+    width: 35%;
+    height: 8%;
+    background-color: black;
+}
+
+.bouchegaucheangle {
+    transform: rotate(45deg) translate(0.1%, -107%);
+}
+
+.bouchedroiteangle {
+    transform: rotate(-45deg) translate(0.1%, -107%);
+}

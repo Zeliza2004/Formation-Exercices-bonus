@@ -1,0 +1,86 @@
+@keyframes sleepy {
+    0% {
+        background-position-x: 0;
+    }
+
+    80% {
+        background-position-x: -120px;
+    }
+
+    90% {
+        background-position-x: -240px;
+    }
+}
+
+@keyframes hit {
+    0% {
+        background-position-x: 0;
+    }
+    90% {
+        background-position-x: -238px;
+    }
+    95% {
+        background-position-x: -242px;
+    }
+}
+
+@keyframes move {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -1080px;
+    }
+}
+
+body {
+    text-align: center;
+}
+
+.image {
+    width: 120px;
+    height: 130px;
+    background-image: url("images.png");
+    background-position-x: 0;
+    margin: 20px auto;
+}
+
+#sleepy-front:checked ~ .image{
+    animation: sleepy 1s steps(1) infinite alternate;
+    background-position-y: 0;
+}
+
+#sleepy-left:checked ~ .image{
+    animation: sleepy 1s steps(1) infinite alternate;
+    background-position-y: -130px;
+}
+
+#hit-right:checked ~ .image{
+    animation: hit 1s steps(1) infinite alternate;
+    background-position-y: -390px;
+}
+
+#walk-front:checked ~ .image{
+    animation: move 1s steps(9) infinite;
+    background-position-y: -520px;
+}
+
+#walk-left:checked ~ .image{
+    animation: move 1s steps(9) infinite;
+    background-position-y: -650px;
+}
+
+#walk-back:checked ~ .image{
+    animation: move 1s steps(9) infinite;
+    background-position-y: -780px;
+}
+
+#walk-right:checked ~ .image{
+    animation: move 1s steps(9) infinite;
+    background-position-y: -910px;
+}
+
+#run-right:checked ~ .image{
+    animation: move .6s steps(9) infinite;
+    background-position-y: -910px;
+}
