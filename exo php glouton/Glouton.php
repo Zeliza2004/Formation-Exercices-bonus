@@ -36,7 +36,7 @@
         <form method="post">
             <label for="valeur">Entrez votre valeur : </label>
             <input type="text" id="valeur" name="valeur" size="30">
-            <input type="submit" value="ENVOI" name="Envoyer"/></br>
+            <input type="submit" value="ENVOI" name="Envoyer"><br>
         </form>
 <?php
     $montant_piece= array(50, 20, 10, 5 , 2 , 1 , 0.5 , 0.2 , 0.1); //montant des pieces
@@ -54,7 +54,7 @@
 <?php
         echo "<p></br>Pour ". $nombre_tester . " vous aurez besoin de : </p>" ;
             while ($i < $C) {
-                $nombre_utilisation[$i] = (int) ($nombre_tester/$montant_piece[$i]);
+                $nombre_utilisation[$i] = (int) (round ($nombre_tester*10)/($montant_piece[$i]*10));
                 $nombre_tester -= ($nombre_utilisation[$i]* $montant_piece[$i]);
                 if ($nombre_utilisation[$i] !== 0) {
                 echo "<p>". $nombre_utilisation[$i] . " pièce de ". $montant_piece[$i] . " </p>";
