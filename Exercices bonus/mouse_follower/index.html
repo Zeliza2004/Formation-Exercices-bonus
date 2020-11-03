@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+        }
+        .mouse--follower {
+            width: 50px;
+            height: 50px;
+            background: black;
+            opacity: 0.8;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: 0.1sec;
+        }
+    </style>
+</head>
+<body>
+    <div class="mouse--follower">
+    </div>
+    <script>
+//comment appliquer une fonction quand la souris se déplace dans le site
+document.body.addEventListener('mousemove', function () {
+    //recupérer la position de la souris
+    console.log(event.clientY);
+    console.log(event.clientX);
+    var target = document.querySelector('.mouse--follower');
+    //appliquer la position dela souris au mouse follower quand la souris se deplace dans le site
+    target.style.left = event.clientX + 'px';
+    target.style.top = event.clientY + 'px';
+})
+    </script>
+</body>
+</html> 
